@@ -641,7 +641,6 @@
           <ul class="services-list">
             <li><strong>무료 AI 컨설팅</strong> 및 맞춤형 솔루션 제안</li>
             <li><strong>POC(개념증명)</strong> 서비스 제공</li>
-            <li><strong>24시간 기술지원</strong> 및 유지보수</li>
             <li><strong>제조업 스마트팩토리</strong> 구축 컨설팅</li>
             <li><strong>유통업 AI 솔루션</strong> 도입 지원</li>
             <li><strong>금융업 핀테크 AI</strong> 개발 상담</li>
@@ -676,7 +675,6 @@
               <option value="제조업 스마트팩토리">제조업 스마트팩토리</option>
               <option value="유통업 AI 도입">유통업 AI 도입</option>
               <option value="금융업 핀테크 AI">금융업 핀테크 AI</option>
-              <option value="무료 컨설팅">무료 컨설팅</option>
               <option value="POC 서비스">POC 서비스</option>
               <option value="기타 문의">기타 문의</option>
             </select>
@@ -707,7 +705,7 @@
     // EmailJS 초기화
     (function() {
       emailjs.init({
-        publicKey: 'u9uNg-WrMYgzKgPDA'
+        publicKey: 'Z88V1RVINfhE_R-Xf'
       });
     })();
 
@@ -766,7 +764,7 @@
         submitButton.disabled = true;
         submitButton.textContent = '전송 중...';
         
-        emailjs.send('service_5mnwh1f', 'template_i8m6mqo', formData)
+        emailjs.send('service_23tzgk4', 'template_tsdla8l', formData)
           .then(function(response) {
             showMessage('AI 솔루션 문의가 성공적으로 전송되었습니다! 빠른 시일 내에 전문 상담사가 연락드리겠습니다.', 'success');
             document.getElementById('contact-form').reset();
