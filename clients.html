@@ -691,23 +691,24 @@
     <section class="stats-section">
       <div class="stats-grid">
         <article class="stat-item">
-          <div class="stat-number">150+</div>
+          <div class="stat-number" data-target="4" data-suffix="+">0</div>
           <div class="stat-label">성공적인 프로젝트</div>
         </article>
         <article class="stat-item">
-          <div class="stat-number">98%</div>
+          <div class="stat-number" data-target="98" data-suffix="%">0</div>
           <div class="stat-label">고객 만족도</div>
         </article>
         <article class="stat-item">
-          <div class="stat-number">45%</div>
+          <div class="stat-number" data-target="45" data-suffix="%">0</div>
           <div class="stat-label">평균 효율성 향상</div>
         </article>
         <article class="stat-item">
-          <div class="stat-number">24/7</div>
+          <div class="stat-number" data-special="24/7">24/7</div>
           <div class="stat-label">지원 서비스</div>
         </article>
       </div>
     </section>
+
 
     <section>
       <h2 class="section-title">고객 성공 사례</h2>
@@ -934,9 +935,71 @@
   </footer>
 
   <script>
+// 카운트 업 애니메이션 함수
+function animateCounter(element, target, suffix = '', duration = 2000) {
+  let start = 0;
+  const startTime = performance.now();
+  
+  function updateCounter(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    
+    // easeOutQuart 이징 함수 적용
+    const easedProgress = 1 - Math.pow(1 - progress, 4);
+    const current = Math.floor(start + (target - start) * easedProgress);
+    
+    element.textContent = current + suffix;
+    
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = target + suffix;
+    }
+  }
+  
+  requestAnimationFrame(updateCounter);
+}
+
+// Intersection Observer를 사용한 스크롤 트리거
+const statsObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // 각 stat-number 요소에 대해 애니메이션 실행
+      const statNumbers = entry.target.querySelectorAll('.stat-number');
+      
+      statNumbers.forEach(statNumber => {
+        const target = parseInt(statNumber.getAttribute('data-target'));
+        const suffix = statNumber.getAttribute('data-suffix') || '';
+        const isSpecial = statNumber.getAttribute('data-special');
+        
+        if (!isSpecial && target) {
+          // 카운트 업 애니메이션 시작
+          animateCounter(statNumber, target, suffix, 2000);
+        }
+      });
+      
+      // 한 번만 실행되도록 observer 해제
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { 
+  threshold: 0.3,
+  rootMargin: '0px 0px -50px 0px'
+});
+
+
+
+
+
     document.addEventListener('DOMContentLoaded', function() {
       const hamburger = document.querySelector('.hamburger');
       const menu = document.querySelector('.menu');
+
+
+      const statsSection = document.querySelector('.stats-section');
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
 
       hamburger.addEventListener('click', function() {
         menu.classList.toggle('open');
@@ -987,7 +1050,7 @@
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
       });
-    });
+    });    
   </script>
 </body>
 </html>
