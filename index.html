@@ -10,8 +10,6 @@
 
     gtag('config', 'G-RD51QS9TMT');
   </script>
-
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
@@ -224,7 +222,6 @@
     .hamburger.is-active .hamburger-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px);
     }
-
     .menu {
       display: flex;
       gap: 34px;
@@ -302,7 +299,6 @@
         padding-top: 44px;
         }
     }
-
     .hero {
       background: linear-gradient(90deg, #e7f6fa 0%, #f7fbff 100%);
       border-radius: 0 0 32px 32px;
@@ -454,35 +450,43 @@
       font-family: 'Rajdhani', sans-serif;
       text-transform: uppercase;
     }
-    .timeline {
-      background: #f7fbff;
-      border-radius: 16px;
-      padding: 24px 18px;
+
+    /* 새소식 섹션 스타일 */
+    .news-container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 18px 0 rgba(47,215,230,0.07);
+      padding: 24px;
       margin-bottom: 40px;
-      box-shadow: 0 2px 8px 0 rgba(47,215,230,0.03);
     }
-    .timeline-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .news-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border-top: 1px solid #eee;
     }
-    .timeline-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-size: 1.02rem;
-      color: #333;
+    .news-item {
+      border-bottom: 1px solid #eee;
+      padding: 18px 0;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .news-item:hover {
+      background: #f1f3f5;
+    }
+    .news-title {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 6px;
+      font-family: 'Rajdhani', sans-serif;
+    }
+    .news-summary {
+      color: #555;
+      font-size: 0.97em;
       font-family: 'Poppins', sans-serif;
     }
-    .timeline-date {
-      font-size: 0.98rem;
-      color: #2fd7e6;
-      min-width: 100px;
-      font-weight: 700;
-      font-family: 'Rajdhani', sans-serif;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
+
     footer {
       background: #222;
       color: #ffffff;
@@ -529,14 +533,6 @@
       .hero-btn {
         text-align: center;
       }
-      .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      .timeline-date {
-        min-width: auto;
-      }
     }
 
     .notice-bar {
@@ -568,7 +564,6 @@
         flex: 1;
         text-align: center;
         }
-
         .notice-close {
         position: absolute;
         right: 0;
@@ -747,26 +742,9 @@ body.notice-active {
     </section>
 
     <section>
-      <h2 class="section-title">오늘의 소식</h2>
-      <div class="timeline">
-        <div class="timeline-list">
-          <div class="timeline-item">
-            <span class="timeline-date">2025.06.19</span>
-            <span><strong>AI 컨퍼런스 참가</strong> 및 산업 파트너십 체결</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2025.06.18</span>
-            <span>씽즈브레인, <strong>차세대 AI 서비스 베타 오픈</strong></span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2025.06.17</span>
-            <span><strong>AI 윤리 가이드라인</strong> 발표</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2025.06.16</span>
-            <span>기업 고객 대상 <strong>맞춤형 AI 솔루션 설명회</strong></span>
-          </div>
-        </div>
+      <h2 class="section-title">새소식</h2>
+      <div class="news-container">
+        <ul class="news-list" id="newsList"></ul>
       </div>
     </section>
   </main>
@@ -809,48 +787,94 @@ body.notice-active {
       });
     });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const noticeClosed = localStorage.getItem('noticeClosed');
-  
-  if (!noticeClosed) {
-    document.body.classList.add('notice-active');
-  } else {
-    const noticeBar = document.getElementById('notice-bar');
-    if (noticeBar) {
-      noticeBar.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', function() {
+      const noticeClosed = localStorage.getItem('noticeClosed');
+      
+      if (!noticeClosed) {
+        document.body.classList.add('notice-active');
+      } else {
+        const noticeBar = document.getElementById('notice-bar');
+        if (noticeBar) {
+          noticeBar.style.display = 'none';
+        }
+      }
+    });
+
+    function closeNotice() {
+      const noticeBar = document.getElementById('notice-bar');
+      
+      noticeBar.classList.add('closing');
+      
+      setTimeout(() => {
+        noticeBar.style.display = 'none';
+        document.body.classList.remove('notice-active');
+        
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        localStorage.setItem('noticeClosed', tomorrow.getTime());
+      }, 300);
     }
-  }
-});
 
-function closeNotice() {
-  const noticeBar = document.getElementById('notice-bar');
-  
-  noticeBar.classList.add('closing');
-  
-  setTimeout(() => {
-    noticeBar.style.display = 'none';
-    document.body.classList.remove('notice-active');
-    
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    localStorage.setItem('noticeClosed', tomorrow.getTime());
-  }, 300);
-}
-
-function checkNoticeExpiry() {
-  const noticeClosed = localStorage.getItem('noticeClosed');
-  if (noticeClosed) {
-    const closedTime = parseInt(noticeClosed);
-    const now = new Date().getTime();
-    
-    if (now > closedTime) {
-      localStorage.removeItem('noticeClosed');
+    function checkNoticeExpiry() {
+      const noticeClosed = localStorage.getItem('noticeClosed');
+      if (noticeClosed) {
+        const closedTime = parseInt(noticeClosed);
+        const now = new Date().getTime();
+        
+        if (now > closedTime) {
+          localStorage.removeItem('noticeClosed');
+        }
+      }
     }
-  }
-}
 
-checkNoticeExpiry();
+    checkNoticeExpiry();
 
+    // 새소식 마크다운 파일 목록
+    const markdownFiles = [
+      'news/2025-06-23.md',
+      'news/2025-06-22.md',
+      'news/2025-06-21.md',
+      'news/2025-06-20.md'
+    ];
+
+    // 마크다운 파일 포맷:
+    // # 제목
+    // 요약 내용
+    // <!--link:https://example.com/original-article-->
+
+    async function fetchNewsItem(mdPath) {
+      try {
+        const res = await fetch(mdPath);
+        if (!res.ok) return null;
+        const text = await res.text();
+        const lines = text.split('\n');
+        const title = lines[0].replace(/^#\s*/, '').trim();
+        const summary = lines[1] ? lines[1].trim() : '';
+        const linkMatch = text.match(/<!--\s*link:(.*?)\s*-->/i);
+        const link = linkMatch ? linkMatch[1].trim() : '#';
+        return { title, summary, link };
+      } catch {
+        return null;
+      }
+    }
+
+    async function renderNewsList() {
+      const listEl = document.getElementById('newsList');
+      for (const mdFile of markdownFiles) {
+        const item = await fetchNewsItem(mdFile);
+        if (!item) continue;
+        const li = document.createElement('li');
+        li.className = 'news-item';
+        li.innerHTML = `
+          <div class="news-title">${item.title}</div>
+          <div class="news-summary">${item.summary}</div>
+        `;
+        li.onclick = () => window.open(item.link, '_blank');
+        listEl.appendChild(li);
+      }
+    }
+
+    renderNewsList();
   </script>
 </body>
 </html>
