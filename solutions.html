@@ -825,6 +825,121 @@
         padding: 40px 20px;
       }
     }
+
+    .video-carousel {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 12px 48px rgba(47,215,230,0.15);
+      background: #000;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 200%;
+    }
+
+    .video-slide {
+      width: 50%;
+      flex-shrink: 0;
+    }
+
+    .video-slide .video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      box-shadow: none;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .video-slide .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(47, 215, 230, 0.9);
+      color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(47, 215, 230, 1);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .prev-btn {
+      left: 20px;
+    }
+
+    .next-btn {
+      right: 20px;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(47, 215, 230, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .indicator.active {
+      background: #2fd7e6;
+      transform: scale(1.2);
+    }
+
+    .indicator:hover {
+      background: rgba(47, 215, 230, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      
+      .prev-btn {
+        left: 10px;
+      }
+      
+      .next-btn {
+        right: 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -958,20 +1073,53 @@
         <strong>LLM-MCP 협업 플랫폼</strong>의 실제 작동 방식과 핵심 기능들을 영상으로 확인해보세요.<br>
         실시간 협업 시나리오와 AI-Human 인터랙션의 혁신적인 경험을 소개합니다.
       </p>
-      <div class="video-container">
-        <iframe 
-          width="560" 
-          height="315" 
-          src="https://www.youtube.com/embed/zyAlOv1fJio?si=3n47KkGUqewE8AHP" 
-          title="씽즈브레인 AI 자동화 솔루션 데모 영상" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" 
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+      
+      <div class="video-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="video-slide active">
+              <div class="video-container">
+                <iframe 
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/zyAlOv1fJio?si=3n47KkGUqewE8AHP" 
+                  title="씽즈브레인 AI 자동화 솔루션 데모 영상" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+              </div>
+            </div>
+            
+            <div class="video-slide">
+              <div class="video-container">
+                <iframe 
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/ZvMOpZqDoaU?si=tXjV2UMUccv_D7Nt" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+          
+          <button class="carousel-btn prev-btn" aria-label="이전 영상">‹</button>
+          <button class="carousel-btn next-btn" aria-label="다음 영상">›</button>
+        </div>
+        
+        <div class="carousel-indicators">
+          <button class="indicator active" data-slide="0"></button>
+          <button class="indicator" data-slide="1"></button>
+        </div>
       </div>
     </section>
+
 
     <section class="features-section">
       <h2 class="section-title">핵심 기능</h2>
@@ -1135,6 +1283,84 @@
         });
       });
     });
+
+    // 비디오 캐러셀 기능
+    const carousel = {
+      track: document.querySelector('.carousel-track'),
+      slides: document.querySelectorAll('.video-slide'),
+      indicators: document.querySelectorAll('.indicator'),
+      prevBtn: document.querySelector('.prev-btn'),
+      nextBtn: document.querySelector('.next-btn'),
+      currentSlide: 0,
+      
+      init() {
+        if (!this.track) return;
+        
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        this.indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // 터치/스와이프 지원
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+        
+        this.track.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+        });
+        
+        this.track.addEventListener('touchmove', (e) => {
+          if (!isDragging) return;
+          currentX = e.touches[0].clientX;
+        });
+        
+        this.track.addEventListener('touchend', () => {
+          if (!isDragging) return;
+          isDragging = false;
+          
+          const diff = startX - currentX;
+          if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+              this.nextSlide();
+            } else {
+              this.prevSlide();
+            }
+          }
+        });
+      },
+      
+      updateCarousel() {
+        const translateX = -this.currentSlide * 50;
+        this.track.style.transform = `translateX(${translateX}%)`;
+        
+        this.indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === this.currentSlide);
+        });
+      },
+      
+      nextSlide() {
+        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+        this.updateCarousel();
+      },
+      
+      prevSlide() {
+        this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+        this.updateCarousel();
+      },
+      
+      goToSlide(index) {
+        this.currentSlide = index;
+        this.updateCarousel();
+      }
+    };
+
+    // 캐러셀 초기화
+    carousel.init();
+
   </script>
 </body>
 </html>
