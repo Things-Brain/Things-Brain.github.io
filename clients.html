@@ -1,1103 +1,132 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RD51QS9TMT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RD51QS9TMT');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things-Brain | 고객사 및 파트너</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- SEO 최적화된 메타 태그 -->
-  <title>MCP 기반 맞춤형 AI 솔루션 - 씽즈브레인 | 차세대 AI 에이전트 플랫폼</title>
-  <meta name="description" content="MCP(Model Context Protocol) 기술을 활용한 혁신적인 AI 솔루션. 3,700+ 앱 연동, 브라우저 자동화, 실시간 데이터 처리로 업무 효율성 극대화" />
-  <meta name="keywords" content="MCP, Model Context Protocol, AI 에이전트, 브라우저 자동화, 앤스로픽, 컴퓨터 유즈, 맞춤형 AI 솔루션, 스마트팜, 산업용 로봇" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="author" content="씽즈브레인 (Things Brain Inc.)" />
-  
-  <!-- Open Graph 메타 태그 -->
-  <meta property="og:title" content="MCP 기반 맞춤형 AI 솔루션 - 씽즈브레인" />
-  <meta property="og:description" content="MCP 기술을 활용한 차세대 AI 에이전트 플랫폼으로 업무 자동화와 생산성 혁신을 실현하세요" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thingsbrain.kr/solutions.html" />
-  <meta property="og:image" content="https://thingsbrain.kr/images/mcp-solutions-og.png" />
-  <meta property="og:locale" content="ko_KR" />
-  <meta property="og:site_name" content="씽즈브레인" />
-  
-  <!-- Twitter Card 메타 태그 -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MCP 기반 맞춤형 AI 솔루션 - 씽즈브레인" />
-  <meta name="twitter:description" content="MCP 기술을 활용한 차세대 AI 에이전트 플랫폼으로 업무 자동화와 생산성 혁신을 실현하세요" />
-  <meta name="twitter:image" content="https://thingsbrain.kr/images/mcp-solutions-og.png" />
-  
-  <!-- 캐노니컬 URL -->
-  <link rel="canonical" href="https://thingsbrain.kr/solutions.html" />
-  
-  <!-- 구조화된 데이터 (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "MCP 기반 맞춤형 AI 솔루션",
-    "description": "Model Context Protocol을 활용한 혁신적인 AI 에이전트 플랫폼으로 3,700+ 앱 연동과 브라우저 자동화를 제공합니다.",
-    "provider": {
-      "@type": "Organization",
-      "name": "씽즈브레인",
-      "url": "https://thingsbrain.kr"
-    },
-    "serviceType": "AI 솔루션 및 자동화",
-    "areaServed": "KR",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "MCP 기반 AI 솔루션",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "스마트 제조 솔루션",
-            "description": "MCP를 통해 MES와 실시간 연결하여 생산성 30% 향상, 운영비용 20% 절감을 실현합니다."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "리테일 인텔리전스",
-            "description": "3,700+ 앱 연동을 통한 고객 행동 분석과 재고 최적화로 매출 증대를 달성합니다."
-          }
+    <style>
+        :root {
+            --primary: #007bff;
+            --primary-hover: #0056b3;
+            --dark: #0f172a;
+            --text: #334155;
+            --light-bg: #f8fafc;
+            --border: #e2e8f0;
         }
-      ]
-    }
-  }
-  </script>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Rajdhani:wght@700&display=swap');
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Rajdhani', 'Poppins', 'Segoe UI', Arial, sans-serif;
-      background: #f4f7fa;
-      color: #222;
-      min-height: 100vh;
-    }
-    header {
-      background: #fff;
-      border-bottom: 1.5px solid #e0e8ef;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 12px 0 rgba(47,215,230,0.05);
-    }
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 0 16px 0;
-      position: relative;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      user-select: none;
-    }
-    .logo a {
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        align-items: center;
-    }
-    .logo a:hover {
-        opacity: 0.8;
-    }
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-      user-select: none;
-    }
-    .logo-ko {
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #111;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 0 0 2px #2fd7e6aa;
-    }
-    .logo-en {
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 0.84rem;
-      color: #0c8ace;
-      font-style: italic;
-    }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Sans KR', sans-serif; color: var(--text); background-color: #ffffff; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
 
-    .hamburger {
-      display: none;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-    }
-    .hamburger-line {
-      display: block;
-      width: 24px;
-      height: 3px;
-      background-color: #222;
-      margin: 2px 0;
-      transition: all 0.3s ease;
-      border-radius: 2px;
-    }
-    .hamburger.is-active .hamburger-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .hamburger.is-active .hamburger-line:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.is-active .hamburger-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-    }
+        /* 네비게이션 바 */
+        header {
+            position: sticky; top: 0; background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000;
+        }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 22px; font-weight: 700; color: var(--dark); letter-spacing: -0.5px; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 30px; list-style: none; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-links .active { color: var(--primary); font-weight: 700; }
 
-    .menu {
-      display: flex;
-      gap: 34px;
-    }
-    .menu a {
-      color: #222;
-      text-decoration: none;
-      font-size: 1.07rem;
-      font-weight: 500;
-      position: relative;
-      padding: 2px 0;
-      transition: color 0.18s;
-    }
-    .menu a:after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2.5px;
-      background: linear-gradient(90deg, #2fd7e6 0%, #6a82fb 100%);
-      transition: width .22s;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      border-radius: 2px;
-    }
-    .menu a:hover {
-      color: #2fd7e6;
-    }
-    .menu a:hover:after {
-      width: 100%;
-    }
-    .menu a.active {
-      color: #2fd7e6;
-    }
-    .menu a.active:after {
-      width: 100%;
-    }
+        /* 섹션 공통 스타일 */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .clients-hero { padding: 120px 20px 60px; text-align: center; background: linear-gradient(180deg, #ebf5ff 0%, #ffffff 100%); }
+        .clients-hero h1 { font-size: 44px; font-weight: 700; color: var(--dark); margin-bottom: 20px; }
+        .clients-hero p { font-size: 20px; color: #64748b; max-width: 800px; margin: 0 auto; }
 
-    @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-      .menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        flex-direction: column;
-        gap: 0;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        border-radius: 0 0 12px 12px;
-        padding: 20px 0;
-      }
-      .menu.open {
-        display: flex;
-      }
-      .menu a {
-        padding: 12px 24px;
-        font-size: 1.1rem;
-        border-bottom: 1px solid #f0f0f0;
-      }
-      .menu a:last-child {
-        border-bottom: none;
-      }
-      .logo-ko {
-        font-size: 1.2rem;
-      }
-      .logo-en {
-        font-size: 0.75rem;
-      }
-    }
+        /* 타겟 파트너 그리드 */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-top: 20px; }
+        .target-card { background: #ffffff; padding: 45px 35px; border-radius: 20px; border: 1px solid var(--border); transition: all 0.3s ease; }
+        .target-card:hover { border-color: var(--primary); box-shadow: 0 12px 30px rgba(0, 123, 255, 0.04); transform: translateY(-3px); }
+        
+        .target-card .icon-box { width: 50px; height: 50px; background: #e6f2ff; color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; font-size: 22px; }
+        .target-card h3 { font-size: 22px; color: var(--dark); margin-bottom: 15px; font-weight: 700; }
+        .target-card p { color: #64748b; font-size: 16px; line-height: 1.6; }
 
-    .hero {
-      background: linear-gradient(135deg, #e7f6fa 0%, #f7fbff 100%);
-      border-radius: 0 0 32px 32px;
-      padding: 56px 0 36px 0;
-      margin-bottom: 48px;
-      box-shadow: 0 10px 32px 0 rgba(47,215,230,0.06);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-content {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .hero-title {
-      font-size: 2.7rem;
-      font-weight: 700;
-      color: #1c3e60;
-      margin-bottom: 18px;
-      line-height: 1.15;
-      font-family: 'Rajdhani', sans-serif;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-    .hero-desc {
-      font-size: 1.22rem;
-      color: #444;
-      margin-bottom: 26px;
-      line-height: 1.6;
-      font-family: 'Poppins', sans-serif;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        /* 비즈니스 제안 섹션 (CTA) */
+        .cta-section { background-color: var(--light-bg); text-align: center; padding: 90px 20px; border-top: 1px solid var(--border); }
+        .cta-box { max-width: 700px; margin: 0 auto; }
+        .cta-box h2 { font-size: 32px; color: var(--dark); margin-bottom: 20px; font-weight: 700; }
+        .cta-box p { font-size: 18px; color: #64748b; margin-bottom: 35px; }
+        
+        .btn {
+            display: inline-block; background-color: var(--primary); color: #ffffff;
+            padding: 15px 35px; border-radius: 30px; font-weight: 600; font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.25); transition: all 0.2s ease;
+        }
+        .btn:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
 
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #1c3e60;
-      margin: 48px 0 32px 0;
-      letter-spacing: 1.2px;
-      font-family: 'Rajdhani', sans-serif;
-      text-transform: uppercase;
-      text-align: center;
-    }
+        /* 푸터 */
+        footer { background-color: var(--light-bg); padding: 60px 20px; border-top: 1px solid var(--border); text-align: center; font-size: 15px; color: #94a3b8; }
+        footer p { margin-bottom: 10px; }
 
-    .stats-section {
-      background: #fff;
-      border-radius: 18px;
-      padding: 48px 32px;
-      margin-bottom: 48px;
-      box-shadow: 0 2px 18px 0 rgba(47,215,230,0.07);
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      text-align: center;
-    }
-    .stat-item {
-      padding: 24px 16px;
-    }
-    .stat-number {
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: #2fd7e6;
-      font-family: 'Rajdhani', sans-serif;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .stat-label {
-      font-size: 1.1rem;
-      color: #444;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-    }
-
-    .mcp-intro {
-      background: #fff;
-      border-radius: 18px;
-      padding: 48px 32px;
-      margin-bottom: 48px;
-      box-shadow: 0 2px 18px 0 rgba(47,215,230,0.07);
-    }
-    .mcp-intro h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #2fd7e6;
-      margin-bottom: 16px;
-      font-family: 'Rajdhani', sans-serif;
-      letter-spacing: 0.8px;
-    }
-    .mcp-intro p {
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.6;
-      margin-bottom: 24px;
-      font-family: 'Poppins', sans-serif;
-    }
-    .mcp-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .feature-card {
-      padding: 28px 24px;
-      border: 2px solid #e7f6fa;
-      border-radius: 12px;
-      transition: all 0.3s;
-      background: #f7fbff;
-    }
-    .feature-card:hover {
-      border-color: #2fd7e6;
-      background: #fff;
-      transform: translateY(-2px);
-    }
-    .feature-card h4 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1c3e60;
-      margin-bottom: 12px;
-      font-family: 'Rajdhani', sans-serif;
-      letter-spacing: 0.5px;
-    }
-    .feature-card p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.5;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .success-stories {
-      margin-bottom: 48px;
-    }
-    .stories-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 32px;
-    }
-    .story-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 36px 28px;
-      box-shadow: 0 2px 18px 0 rgba(47,215,230,0.07);
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .story-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px 0 rgba(47,215,230,0.13);
-    }
-    .story-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #2fd7e6 0%, #6a82fb 100%);
-    }
-    .story-company {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #2fd7e6;
-      margin-bottom: 12px;
-      font-family: 'Rajdhani', sans-serif;
-      letter-spacing: 0.8px;
-    }
-    .story-industry {
-      font-size: 0.95rem;
-      color: #6a82fb;
-      margin-bottom: 16px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .story-challenge {
-      font-size: 1.05rem;
-      color: #444;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      font-family: 'Poppins', sans-serif;
-    }
-    .story-result {
-      background: linear-gradient(135deg, #e7f6fa 0%, #f7fbff 100%);
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 16px;
-    }
-    .story-result-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #1c3e60;
-      margin-bottom: 8px;
-      font-family: 'Rajdhani', sans-serif;
-    }
-    .story-result-text {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.5;
-      font-family: 'Poppins', sans-serif;
-    }
-    .story-metrics {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .metric {
-      flex: 1;
-      min-width: 100px;
-      text-align: center;
-      padding: 12px 8px;
-      background: rgba(47,215,230,0.1);
-      border-radius: 8px;
-    }
-    .metric-value {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #2fd7e6;
-      font-family: 'Rajdhani', sans-serif;
-      line-height: 1;
-    }
-    .metric-label {
-      font-size: 0.85rem;
-      color: #444;
-      margin-top: 4px;
-      font-weight: 600;
-    }
-
-    .solutions-section {
-      background: #fff;
-      border-radius: 18px;
-      padding: 48px 32px;
-      margin-bottom: 48px;
-      box-shadow: 0 2px 18px 0 rgba(47,215,230,0.07);
-    }
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .solution-card {
-      padding: 28px 24px;
-      border: 2px solid #e7f6fa;
-      border-radius: 12px;
-      transition: all 0.3s;
-      background: #f7fbff;
-    }
-    .solution-card:hover {
-      border-color: #2fd7e6;
-      background: #fff;
-      transform: translateY(-2px);
-    }
-    .solution-icon {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #2fd7e6 0%, #6a82fb 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      color: #fff;
-      font-size: 1.5rem;
-    }
-    .solution-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1c3e60;
-      margin-bottom: 12px;
-      font-family: 'Rajdhani', sans-serif;
-      letter-spacing: 0.5px;
-    }
-    .solution-desc {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.5;
-      margin-bottom: 16px;
-      font-family: 'Poppins', sans-serif;
-    }
-    .solution-features {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .solution-features li {
-      padding: 4px 0;
-      font-size: 0.95rem;
-      color: #444;
-      position: relative;
-      padding-left: 20px;
-    }
-    .solution-features li:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: #2fd7e6;
-      font-weight: bold;
-    }
-
-    .cta-section {
-      background: linear-gradient(135deg, #1c3e60 0%, #2fd7e6 100%);
-      border-radius: 24px;
-      padding: 48px 32px;
-      text-align: center;
-      margin: 48px 0;
-      color: #fff;
-    }
-    .cta-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      font-family: 'Rajdhani', sans-serif;
-    }
-    .cta-desc {
-      font-size: 1.1rem;
-      margin-bottom: 32px;
-      opacity: 0.9;
-      font-family: 'Poppins', sans-serif;
-    }
-    .cta-btn {
-      display: inline-block;
-      padding: 16px 40px;
-      background: #fff;
-      color: #1c3e60;
-      text-decoration: none;
-      border-radius: 32px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: all 0.18s;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: 0.5px;
-    }
-    .cta-btn:hover {
-      background: #f0f0f0;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      background: #222;
-      color: #ffffff;
-      text-align: center;
-      padding: 28px 0 16px 0;
-      margin-top: 60px;
-      font-size: 0.95rem;
-      letter-spacing: 0.1px;
-      border-top: 1.5px solid #2fd7e6;
-      font-family: 'Rajdhani', sans-serif;
-      opacity: 0.88;
-      letter-spacing: 2px;
-      font-weight: 200;
-      text-transform: uppercase;
-      word-spacing: 0.2em;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        width: 98%;
-      }
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      .hero-desc {
-        font-size: 1.1rem;
-      }
-      .section-title {
-        font-size: 1.8rem;
-      }
-      .stories-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-title {
-        font-size: 1.8rem;
-      }
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .stat-number {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .clients-hero h1 { font-size: 32px; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">
-          <a href="index.html" aria-label="씽즈브레인 홈페이지로 이동">
-            <img src="./images/ci.png" width="100" height="100" alt="씽즈브레인 로고 - MCP 기반 AI 솔루션 전문기업"/>
-            <div class="logo-text">
-              <span class="logo-ko">씽즈브레인</span>
-              <span class="logo-en">THINGS BRAIN Inc.</span>
-            </div>
-          </a>
-        </div>
-        
-        <button class="hamburger" aria-label="메뉴 열기" aria-expanded="false">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-        
-        <div class="menu" role="navigation" aria-label="주요 메뉴">
-          <a href="./about.html">About</a>
-          <a href="./solutions.html">Solutions</a>
-          <a href="./investors.html">Investors</a>
-          <a href="./clients.html" class="active">Clients</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-content">
-      <h1 class="hero-title">MCP 기반 맞춤형 AI 솔루션</h1>
-      <p class="hero-desc">
-        <strong>Model Context Protocol</strong>을 활용한 혁신적인 AI 에이전트로<br>
-        업무 자동화와 생산성 혁신을 실현하세요
-      </p>
-    </div>
-  </section>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Things-<span>Brain</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html">회사소개</a></li>
+                <li><a href="solutions.html">솔루션</a></li>
+                <li><a href="clients.html" class="active">고객사</a></li>
+                <li><a href="investors.html">투자정보</a></li>
+                <li><a href="contact.html">문의하기</a></li>
+            </ul>
+        </div>
+    </header>
 
-  <main class="container">
-    <section class="stats-section">
-      <div class="stats-grid">
-        <article class="stat-item">
-          <div class="stat-number" data-target="3700" data-suffix="+">0</div>
-          <div class="stat-label">연동 가능한 앱</div>
-        </article>
-        <article class="stat-item">
-          <div class="stat-number" data-special="24/7">24/7</div>
-          <div class="stat-label">무중단 AI 에이전트</div>
-        </article>
-        <article class="stat-item">
-          <div class="stat-number" data-target="99" data-suffix=".9%">0</div>
-          <div class="stat-label">시스템 안정성</div>
-        </article>
-        <article class="stat-item">
-          <div class="stat-number" data-target="100" data-suffix="%">0</div>
-          <div class="stat-label">실시간 데이터 처리</div>
-        </article>
-      </div>
+    <section class="clients-hero">
+        <h1>Target Partners</h1>
+        <p>Things-Brain은 디지털 고속 성장과 혁신적인 비용 절감이 필요한 기업들의 첫 번째 기술 파트너가 될 준비가 되어 있습니다.</p>
     </section>
 
-    <section class="mcp-intro">
-      <h3>🔗 MCP (Model Context Protocol) 기술 혁신</h3>
-      <p>
-        씽즈브레인은 앤스로픽이 개발한 <strong>MCP(Model Context Protocol)</strong> 기술을 기반으로 
-        3,700여 개의 앱과 서비스에 AI가 직접 접근할 수 있는 통합 플랫폼을 구축합니다. 
-        기존의 폐쇄적 플러그인 방식을 넘어서 오픈소스 기반의 확장 가능한 AI 에이전트 생태계를 제공합니다.
-      </p>
-      
-      <div class="mcp-features">
-        <div class="feature-card">
-          <h4>🌐 광범위한 앱 연동</h4>
-          <p>구글 시트, 슬랙, 세일즈포스 등 3,700+ 앱의 API와 데이터를 실시간으로 연결하여 자연어 입력만으로 복잡한 업무를 자동화합니다.</p>
+    <main class="container">
+        <div class="grid">
+            <div class="target-card">
+                <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+                <h3>초기 스타트업 및 창업팀</h3>
+                <p>아이디어를 빠르게 MVP(최소 기능 제품) 앱이나 웹 서비스로 구현하여 시장의 반응을 검증하고, 경쟁사보다 빠르게 투자 유치 및 런칭 기회를 선점하고자 하는 팀을 지원합니다.</p>
+            </div>
+            
+            <div class="target-card">
+                <div class="icon-box"><i class="fa-solid fa-industry"></i></div>
+                <h3>제조 및 레거시 인프라 기업</h3>
+                <p>기존의 노후화된 공장 설비, 구형 아날로그 장비들을 큰 비용 부담 없이 스마트 IoT 환경으로 전환하고, 현장 데이터 가시성을 확보하여 고정 운영비를 절감하려는 기업과 함께합니다.</p>
+            </div>
+            
+            <div class="target-card">
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>무중단 서비스가 필요한 비즈니스</h3>
+                <p>물류, 스마트팜, 야외 관제 등 네트워크 연결이 불안정한 환경에서도 시스템 다운타임 리스크 없이 안정적인 데이터 보존과 기기 자율 제어 연속성이 필수적인 비즈니스 영역에 최적화되어 있습니다.</p>
+            </div>
         </div>
-        <div class="feature-card">
-          <h4>🤖 브라우저 자동화</h4>
-          <p>앤스로픽의 컴퓨터 유즈(Computer Use) 기술을 통해 AI가 사용자의 컴퓨터 화면을 보고 커서와 타이핑을 대신 수행합니다.</p>
-        </div>
-        <div class="feature-card">
-          <h4>🔄 실시간 데이터 처리</h4>
-          <p>MES, CRM, ERP 시스템과 실시간 연동하여 생산라인부터 고객 관리까지 모든 비즈니스 프로세스를 최적화합니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">산업별 맞춤형 솔루션</h2>
-      <div class="success-stories">
-        <div class="stories-grid">
-          <article class="story-card">
-            <h3 class="story-company">스마트 제조 솔루션</h3>
-            <div class="story-industry">Manufacturing · Smart Factory</div>
-            <div class="story-challenge">
-              MCP를 통해 MES(Manufacturing Execution System)와 실시간 연결하여 
-              생산라인 공정 데이터를 자연어 입력만으로 최적화할 수 있습니다.
-            </div>
-            <div class="story-result">
-              <div class="story-result-title">주요 기능</div>
-              <div class="story-result-text">
-                • 생산라인 실시간 모니터링 및 제어<br>
-                • 품질 관리 자동화 시스템<br>
-                • 예측 유지보수 및 장비 최적화<br>
-                • 공급망 관리 및 재고 최적화
-              </div>
-            </div>
-            <div class="story-metrics">
-              <div class="metric">
-                <div class="metric-value">30%</div>
-                <div class="metric-label">생산성 향상</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">20%</div>
-                <div class="metric-label">운영비용 절감</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="story-card">
-            <h3 class="story-company">리테일 인텔리전스</h3>
-            <div class="story-industry">Retail · E-commerce</div>
-            <div class="story-challenge">
-              MCP 프로토콜을 활용하여 구글 시트, 슬랙, 세일즈포스 등 기존 앱의 API와 데이터를 
-              실시간으로 연동하여 고객 행동 분석부터 재고 최적화까지 자동 처리합니다.
-            </div>
-            <div class="story-result">
-              <div class="story-result-title">주요 기능</div>
-              <div class="story-result-text">
-                • 고객 행동 패턴 분석 및 예측<br>
-                • 개인화 상품 추천 시스템<br>
-                • 동적 가격 책정 및 프로모션 최적화<br>
-                • 옴니채널 고객 경험 통합
-              </div>
-            </div>
-            <div class="story-metrics">
-              <div class="metric">
-                <div class="metric-value">25%</div>
-                <div class="metric-label">매출 증대</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">40%</div>
-                <div class="metric-label">고객 만족도 향상</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="story-card">
-            <h3 class="story-company">핀테크 AI</h3>
-            <div class="story-industry">Finance · FinTech</div>
-            <div class="story-challenge">
-              MCP 기반 AI 에이전트를 통해 금융 시장 데이터 분석과 투자 결정을 자동화하며, 
-              실시간 리스크 분석과 사기 탐지 시스템을 제공합니다.
-            </div>
-            <div class="story-result">
-              <div class="story-result-title">주요 기능</div>
-              <div class="story-result-text">
-                • 실시간 시장 데이터 분석 및 투자 전략 수립<br>
-                • 포트폴리오 리스크 관리 및 최적화<br>
-                • AI 기반 사기 탐지 및 보안 시스템<br>
-                • 규제 준수 모니터링 및 리포팅
-              </div>
-            </div>
-            <div class="story-metrics">
-              <div class="metric">
-                <div class="metric-value">35%</div>
-                <div class="metric-label">운영비용 절감</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">증가</div>
-                <div class="metric-label">투자 수익률</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="story-card">
-            <h3 class="story-company">헬스케어 AI</h3>
-            <div class="story-industry">Healthcare · MedTech</div>
-            <div class="story-challenge">
-              의료 데이터와 진단 시스템을 MCP로 연결하여 개인화된 치료 추천과 
-              환자 모니터링을 자동화합니다.
-            </div>
-            <div class="story-result">
-              <div class="story-result-title">주요 기능</div>
-              <div class="story-result-text">
-                • 의료 영상 분석 및 진단 보조<br>
-                • 개인화 치료 계획 수립 및 추천<br>
-                • 환자 생체 신호 실시간 모니터링<br>
-                • 약물 상호작용 분석 및 처방 최적화
-              </div>
-            </div>
-            <div class="story-metrics">
-              <div class="metric">
-                <div class="metric-value">90%+</div>
-                <div class="metric-label">진단 정확도</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">개선</div>
-                <div class="metric-label">치료 효과</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="story-card">
-            <h3 class="story-company">모빌리티 AI</h3>
-            <div class="story-industry">Mobility · Transportation</div>
-            <div class="story-challenge">
-              앤스로픽의 컴퓨터 유즈(Computer Use) 기술을 활용하여 교통 관리 시스템과 
-              물류 최적화를 위한 복잡한 업무를 AI 에이전트가 자동으로 처리합니다.
-            </div>
-            <div class="story-result">
-              <div class="story-result-title">주요 기능</div>
-              <div class="story-result-text">
-                • 실시간 교통 흐름 분석 및 신호 최적화<br>
-                • 배송 경로 최적화 및 물류 관리<br>
-                • 자율주행 차량 데이터 분석<br>
-                • 대중교통 운영 최적화
-              </div>
-            </div>
-            <div class="story-metrics">
-              <div class="metric">
-                <div class="metric-value">40%</div>
-                <div class="metric-label">운송 효율성 향상</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">절감</div>
-                <div class="metric-label">연료비</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="story-card">
-            <h3 class="story-company">엔터프라이즈 AI</h3>
-            <div class="story-industry">Enterprise · Business</div>
-            <div class="story-challenge">
-              오픈AI의 오퍼레이터(Operator)와 같은 브라우저 조종 기술을 통해 
-              업무 프로세스를 완전 자동화하며, 인간이 컴퓨터를 사용하듯 AI 에이전트가 모든 업무를 처리합니다.
-            </div>
-            <div class="story-result">
-              <div class="story-result-title">주요 기능</div>
-              <div class="story-result-text">
-                • 문서 작성 및 데이터 입력 자동화<br>
-                • 회의 일정 관리 및 협업 도구 연동<br>
-                • 이메일 자동 분류 및 응답 시스템<br>
-                • 의사결정 지원 및 전략 수립 도구
-              </div>
-            </div>
-            <div class="story-metrics">
-              <div class="metric">
-                <div class="metric-value">50%</div>
-                <div class="metric-label">업무 효율성 향상</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">최소화</div>
-                <div class="metric-label">인적 오류</div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">실전 활용 사례</h2>
-      <div class="solutions-section">
-        <div class="solutions-grid">
-          <article class="solution-card">
-            <div class="solution-icon" aria-hidden="true">📈</div>
-            <h3 class="solution-title">영업 및 CRM 자동화</h3>
-            <div class="solution-desc">
-              고객 미팅 회의록을 자동으로 CRM에 기록하고, 대화 내용 기반 후속 이메일을 자동 작성합니다.
-            </div>
-            <ul class="solution-features">
-              <li>회의 내용 자동 요약 및 CRM 업데이트</li>
-              <li>고객 맞춤형 제안서 자동 생성</li>
-              <li>영업 파이프라인 관리 및 예측</li>
-              <li>고객 응대 스크립트 최적화</li>
-              <li><strong>효과: 영업 업무의 70% AI 에이전트 담당</strong></li>
-            </ul>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-icon" aria-hidden="true">👥</div>
-            <h3 class="solution-title">팀 협업 자동화</h3>
-            <div class="solution-desc">
-              구글 칼렌더, 구글 미트, 슬랙, 구글 문서를 MCP로 연결하여 자연어 입력만으로 
-              회의 일정 생성, 내용 요약, 문서화를 자동 처리합니다.
-            </div>
-            <ul class="solution-features">
-              <li>회의 일정 자동 조율 및 초대</li>
-              <li>회의록 자동 생성 및 배포</li>
-              <li>프로젝트 진행 상황 자동 업데이트</li>
-              <li>팀 커뮤니케이션 효율화</li>
-              <li><strong>효과: 협업 업무 자동화로 생산성 극대화</strong></li>
-            </ul>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-icon" aria-hidden="true">🌱</div>
-            <h3 class="solution-title">스마트 팜 IoT 설비 제어</h3>
-            <div class="solution-desc">
-              MCP 기반 AI 에이전트가 온도, 습도, 조명, 관수 시스템 등 농업 IoT 설비를 
-              실시간으로 모니터링하고 최적의 생육 환경을 자동 제어합니다.
-            </div>
-            <ul class="solution-features">
-              <li>온실 환경 자동 제어 (온도, 습도, CO2)</li>
-              <li>토양 수분 및 영양분 실시간 모니터링</li>
-              <li>스마트 관수 시스템 자동 운영</li>
-              <li>작물 생육 상태 AI 분석 및 예측</li>
-              <li>원격 모니터링 및 알림 시스템</li>
-              <li><strong>효과: 농업 관리 노력 50% 절감, 수확률 증진</strong></li>
-            </ul>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-icon" aria-hidden="true">🤖</div>
-            <h3 class="solution-title">산업용 로봇 제어</h3>
-            <div class="solution-desc">
-              MCP를 통해 산업용 로봇의 동작 제어, 경로 계획, 품질 검사를 통합 관리하며, 
-              AI 기반 협동 로봇(Cobot)과의 협업으로 정밀 제조 공정을 자동화합니다.
-            </div>
-            <ul class="solution-features">
-              <li>로봇 동작 시퀀스 자동 프로그래밍</li>
-              <li>실시간 품질 검사 및 불량 감지</li>
-              <li>협동 로봇과 작업자 안전 협업</li>
-              <li>예측 유지보수 및 고장 진단</li>
-              <li>다축 로봇 동기화 제어</li>
-              <li><strong>효과: 제조 정밀도 향상, 생산 효율성 35% 증대</strong></li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+    </main>
 
     <section class="cta-section">
-      <h2 class="cta-title">AI 혁신을 시작하세요</h2>
-      <p class="cta-desc">
-        MCP 기반 맞춤형 AI 솔루션으로 귀사의 디지털 전환을 가속화하고<br>
-        차세대 AI 에이전트 시대를 선도하세요
-      </p>
-      <a href="./contact.html" class="cta-btn" title="MCP 기반 AI 솔루션 맞춤 컨설팅 문의">솔루션 문의하기</a>
+        <div class="cta-box">
+            <h2>Things-Brain의 첫 번째 파트너가 되어보세요</h2>
+            <p>초기 파트너십 구축 기업에게는 맞춤형 아키텍처 컨설팅 및 AI 기반 초고속 프로토타이핑 빌드 혜택을 우선적으로 제공해 드립니다.</p>
+            <a href="contact.html" class="btn">협력 및 기술 문의하기</a>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    &copy; 2025 주식회사 씽즈브레인 (Things Brain Inc.) All rights reserved.
-  </footer>
+    <footer>
+        <p>&copy; 2026 ThingsBrain Inc. All rights reserved.</p>
+        <p style="font-size: 13px;">High-End AI & Web Architecture for Business Acceleration.</p>
+    </footer>
 
-  <script>
-    // 카운트 업 애니메이션 함수
-    function animateCounter(element, target, suffix = '', duration = 2000) {
-      let start = 0;
-      const startTime = performance.now();
-      
-      function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // easeOutQuart 이징 함수 적용
-        const easedProgress = 1 - Math.pow(1 - progress, 4);
-        const current = Math.floor(start + (target - start) * easedProgress);
-        
-        element.textContent = current + suffix;
-        
-        if (progress < 1) {
-          requestAnimationFrame(updateCounter);
-        } else {
-          element.textContent = target + suffix;
-        }
-      }
-      
-      requestAnimationFrame(updateCounter);
-    }
-
-    // Intersection Observer를 사용한 스크롤 트리거
-    const statsObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // 각 stat-number 요소에 대해 애니메이션 실행
-          const statNumbers = entry.target.querySelectorAll('.stat-number');
-          
-          statNumbers.forEach(statNumber => {
-            const target = parseInt(statNumber.getAttribute('data-target'));
-            const suffix = statNumber.getAttribute('data-suffix') || '';
-            const isSpecial = statNumber.getAttribute('data-special');
-            
-            if (!isSpecial && target) {
-              // 카운트 업 애니메이션 시작
-              animateCounter(statNumber, target, suffix, 2000);
-            }
-          });
-          
-          // 한 번만 실행되도록 observer 해제
-          statsObserver.unobserve(entry.target);
-        }
-      });
-    }, { 
-      threshold: 0.3,
-      rootMargin: '0px 0px -50px 0px'
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const hamburger = document.querySelector('.hamburger');
-      const menu = document.querySelector('.menu');
-
-      const statsSection = document.querySelector('.stats-section');
-      if (statsSection) {
-        statsObserver.observe(statsSection);
-      }
-
-      hamburger.addEventListener('click', function() {
-        menu.classList.toggle('open');
-        hamburger.classList.toggle('is-active');
-        
-        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-        hamburger.setAttribute('aria-expanded', !expanded);
-        hamburger.setAttribute('aria-label', expanded ? '메뉴 열기' : '메뉴 닫기');
-      });
-
-      const menuLinks = document.querySelectorAll('.menu a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          menu.classList.remove('open');
-          hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded', 'false');
-          hamburger.setAttribute('aria-label', '메뉴 열기');
-        });
-      });
-
-      window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-          menu.classList.remove('open');
-          hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded', 'false');
-          hamburger.setAttribute('aria-label', '메뉴 열기');
-        }
-      });
-
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, observerOptions);
-
-      const animateElements = document.querySelectorAll('.story-card, .solution-card, .stat-item, .feature-card');
-      animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-      });
-    });    
-  </script>
 </body>
 </html>
